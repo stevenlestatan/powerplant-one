@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single"><item android:id="@+id/discussion" android:title="Discussion" android:icon="@drawable/ic_discussion"/>
+        <item android:id="@+id/test_knowledge" android:title="Test knowledge" android:icon="@drawable/ic_knowledge"/>
+        <item android:id="@+id/sign_out" android:title="Sign out" android:icon="@drawable/ic_signout"/></group>
+</menu>

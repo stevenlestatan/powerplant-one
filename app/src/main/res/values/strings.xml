@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Aircraft Powerplant</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="student_name"></string>
+    <string name="hello_blank_fragment">TEST 123</string>
+    <string name="title_activity_student_menu">StudentMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="menu_discussion">Discussion</string>
+    <string name="menu_test">Test knowledge</string>
+    <string name="menu_logout">Signout</string>
+    <string name="menu_statistics">Statistics</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="desc_turbo">A turbocharger is a turbine driven, forced induction device that is utilised in a piston engine to enable it to produce more power. This increase in air and fuel results in the turbocharged engine being more powerful and efficient than its naturally aspirated counterpart.</string>
+    <string name="desc_ccover">A compressor cover includes a compressor inlet duct and an inlet for a compressor wheel. The compressor cover includes at least one appendix positioned between an upstream portion of the compressor inlet duct and the compressor wheel inlet.</string>
+    <string name="desc_bhousing">Bearing housings are modular assemblies designed to make it easy to install bearings and shafts, while protecting bearings, extending their operating life and simplifying maintenance.</string>
+    <string name="desc_splate">The Seal Plate, also known as a back plate or insert plate is where the front seal is generally seated. Made mainly of aluminium, these components MUST be very precise in dimensions to ensure a perfect clearance is found between surrounding components to ensure the perfect seal.</string>
+    <string name="desc_piston">Piston is a disk or short cylinder fitting closely within a tube in which it moves up and down against a liquid or gas, used in an internal combustion engine to derive motion, or in a pump to impart motion.</string>
+    <string name="title_activity_instructor_menu">InstructorMenuActivity</string>
+    <string name="title_activity_main2">MainActivity</string>
+
+    // TURBO QUIZ
+    // FIRST ITEM
+    <string name="t_first_question">Compresses fuel and air</string>
+    <string name="t_first_a">Internal</string>
+    //corect
+    <string name="t_first_b">External</string>
+    <string name="t_first_c">Increase</string>
+    <string name="t_first_d">Decrease</string>
+
+    <string name="t_second_question">It is designed to allow the pilot to select any desired power output at any time. This includes boosting at sea level and altitude compensation</string>
+    <string name="t_second_a">VAP Pressure Controller</string>
+    <string name="t_second_b">Continental Turbo supercharging</string>
+    //corect
+    <string name="t_second_c">Density Controller</string>
+    <string name="t_second_d">Lycoming Turbocharging</string>
+
+    <string name="t_third_question">Mechanical Aspiration is the process of mechanically increasing the manifold pressure of an engine in order to _____ and ___________ horsepower</string>
+    <string name="t_third_a">Increase; decrease</string>
+    //corect
+    <string name="t_third_b">Maintain; increase</string>
+    <string name="t_third_c">Decrease; Maintain</string>
+    <string name="t_third_d">None of the above</string>
+
+    <string name="t_fourth_question">This is a safety valve used in some Continental to relieve MAP at a present b maximum pressure by venting deck pressure</string>
+    <string name="t_fourth_a">Insert Plate</string>
+    <string name="t_fourth_b">MAP relief valve</string>
+    //corect
+    <string name="t_fourth_c">Safety Valve</string>
+    <string name="t_fourth_d">Safety precautions</string>
+
+    <string name="t_fifth_question">It does not boost above 30InHg and uses to exhaust to drive the compressor</string>
+    <string name="t_fifth_a">Lycoming Turbocharging</string>
+    <string name="t_fifth_b">Cycoming Turbocharging</string>
+    //corect
+    <string name="t_fifth_c">Differential Pressure Controller</string>
+    <string name="t_fifth_d">Superchargers</string>
+</resources>

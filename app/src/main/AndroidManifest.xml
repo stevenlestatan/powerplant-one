@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.androidbasedcourseware">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".quiz.turbo.TurboFifthItemActivity"></activity>
+        <activity android:name=".quiz.turbo.TurboFourthItemActivity" />
+        <activity android:name=".quiz.turbo.TurboThirdItemActivity" />
+        <activity android:name=".quiz.turbo.TurboSecondItemActivity" />
+        <activity android:name=".quiz.turbo.TurboFirstItemActivity" />
+        <activity
+            android:name=".instructor.InstructorMenuActivity"
+            android:label="@string/title_activity_instructor_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InstructorMenuActivity"
+            android:label="@string/title_activity_instructor_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".discussion.turbo.PistonActivity" />
+        <activity android:name=".discussion.turbo.BearingHousingActivity" />
+        <activity android:name=".discussion.turbo.InsertPlateActivity" />
+        <activity android:name=".discussion.turbo.BeaingHousingActivity" />
+        <activity android:name=".discussion.turbo.CompressorCoverActivity" />
+        <activity
+            android:name=".popup.PopupActivity"
+            android:theme="@style/AppTheme.PopMe" />
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="optional" />
+
+        <activity
+            android:name=".discussion.turbo.TurboActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student.StudentMenuActivity"
+            android:label="@string/title_activity_student_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".statistics.StatisticsActivity" />
+        <activity android:name=".quiz.QuizPartsBearingsGearingActivity" />
+        <activity android:name=".instructor.InstructorActivity" />
+        <activity android:name=".student.StudentActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

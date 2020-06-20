@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quiz.turbo.TurboThirdItemActivity">
+
+    <LinearLayout
+        android:paddingTop="60dp"
+        android:background="@drawable/bgaircraftmodal"
+        android:id="@+id/aircraftxmodalCC"
+        android:layout_width="350dp"
+        android:layout_height="440dp"
+        android:elevation="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="300dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.49">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TURBOCHARGER"
+            android:textColor="#343434"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/turbo_third_question"
+            android:textAlignment="center"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="50dp"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/t_third_question"
+            android:textColor="#343434"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/radGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/radA"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/t_third_a"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioButton
+                android:id="@+id/radB"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/t_third_b"
+                android:layout_marginBottom="6dp"/>
+
+            <RadioButton
+                android:id="@+id/radC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/t_third_c"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioButton
+                android:id="@+id/radD"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/t_third_d"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="282dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="103dp"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aircraftxmodalCC"
+        app:layout_constraintVertical_bias="0.411" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="101dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aircraftxmodalCC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

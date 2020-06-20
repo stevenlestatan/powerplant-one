@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/view_statistics" android:title="View section/students progress" android:icon="@drawable/ic_statistics"/>
+<item android:id="@+id/signout" android:title="Sign out" android:icon="@drawable/ic_signout"/>
+</menu>
