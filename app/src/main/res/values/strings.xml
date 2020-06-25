@@ -28,6 +28,11 @@
     <string name="desc_bhousing">Bearing housings are modular assemblies designed to make it easy to install bearings and shafts, while protecting bearings, extending their operating life and simplifying maintenance.</string>
     <string name="desc_splate">The Seal Plate, also known as a back plate or insert plate is where the front seal is generally seated. Made mainly of aluminium, these components MUST be very precise in dimensions to ensure a perfect clearance is found between surrounding components to ensure the perfect seal.</string>
     <string name="desc_piston">Piston is a disk or short cylinder fitting closely within a tube in which it moves up and down against a liquid or gas, used in an internal combustion engine to derive motion, or in a pump to impart motion.</string>
+    <string name="desc_bbearing">A ball bearing is a type of rolling-element bearing that uses balls to maintain the separation between the bearing races. The purpose of a ball bearing is to reduce rotational friction and support radial and axial loads.</string>
+    <string name="desc_bcage">The ball bearing cage (also known as a ball bearing retainer or ball separator – these are used interchangeably), is the component in a ball bearing that separates the balls, maintains the balls symmetrical radial spacing, and in most cases, holds the bearings together.</string>
+    <string name="desc_bball">Bearing balls are special highly spherical and smooth balls, most commonly used in ball bearings, but also used as components in things like freewheel mechanisms. The balls come in many different grades.</string>
+    <string name="desc_inner_ring">Inner rings are made from hardened rolling bearing steel and have precision ground or machined raceways. Ideal applications for using inner rings include: When in order to allow larger axial displacements of the shaft in relation to the housing, needle roller bearings must be combined with wider inner rings.</string>
+    <string name="desc_outer_ring">The Outer Ring is the larger of the two bearing rings. On outer ring there is a groove on its inside diameter to form a pathway for the balls. Outer ring surface also has the same high precision finish of the inner ring. The outer ring is usually held stationery.</string>
     <string name="title_activity_instructor_menu">InstructorMenuActivity</string>
     <string name="title_activity_main2">MainActivity</string>
 
@@ -67,4 +72,30 @@
     //corect
     <string name="t_fifth_c">Differential Pressure Controller</string>
     <string name="t_fifth_d">Superchargers</string>
+
+    // BALL BEARING
+    <string name="b_first_a">Crankshaft</string>
+    <string name="b_first_b">Engine Mount</string>
+    <string name="b_first_c">Crankcase</string>
+    <string name="b_first_d">None of the above</string>
+
+    <string name="b_second_a">Piston Pins</string>
+    <string name="b_second_b">Piston Ring</string>
+    <string name="b_second_c">Rocker Arm</string>
+    <string name="b_second_d">Oil Control Rings</string>
+
+    <string name="b_third_a">Piston Ring</string>
+    <string name="b_third_b">Pistin Pins</string>
+    <string name="b_third_c">Rocker Arm</string>
+    <string name="b_third_d">Connecting Rod Assembly</string>
+
+    <string name="b_fourth_a">Crankshaft</string>
+    <string name="b_fourth_b">Ball Bearing</string>
+    <string name="b_fourth_c">Piston</string>
+    <string name="b_fourth_d">Articulating Rod</string>
+
+    <string name="b_fifth_a">Camlobes</string>
+    <string name="b_fifth_b">Camshaft</string>
+    <string name="b_fifth_c">Push Rod</string>
+    <string name="b_fifth_d">None of the above</string>
 </resources>

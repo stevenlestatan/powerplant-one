@@ -68,36 +68,30 @@ public class InstructorActivity extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (instructorId.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Instructor ID is required", Toast.LENGTH_SHORT).show();
-                    return;
-                } else if (instructorName.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Instructor Name is required", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
                 String instructor_id = instructorId.getText().toString();
                 String instructor_name = instructorName.getText().toString();
+
+                if (instructor_id.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Instructor ID is required", Toast.LENGTH_SHORT).show();
+                    return;
+                } else if (instructor_name.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Instructor Name is required", Toast.LENGTH_SHORT).show();
+                    return;
+                } else if (!instructor_id.equals(da.DEFAULT_INSTRUCTOR_ID) || !instructor_name.equals(da.DEFAULT_INSTRUCTOR_NAME)) {
+                    Toast.makeText(getApplicationContext(), "There is a default instructor and it is not you", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 boolean isInstructorExists = da.validateIfInstructorExists(instructor_id);
                 if (isInstructorExists) {
                     Cursor cursor = da.getInstructorById(instructor_id);
                     if (cursor.getCount() > 0) {
-                        cursor.moveToFirst();
-
-                        String instructorId = cursor.getString(cursor.getColumnIndex(da.COLUMN_INSTRUCTOR_ID));
-                        String instructorName = cursor.getString(cursor.getColumnIndex(da.COLUMN_INSTRUCTOR_NAME));
-                        if (!instructorId.equals(instructor_id) || !instructor_name.equals(instructorName)) {
-                            Toast.makeText(getApplicationContext(), "There is a default instructor and it is not you", Toast.LENGTH_SHORT).show();
-                            return;
-                        }
+                        Intent intent = new Intent(InstructorActivity.this, InstructorMenuActivity.class);
+                        intent.putExtra("instructorName", instructor_name);
+                        startActivity(intent);
+                        finish();
                     }
                 }
-
-                Intent intent = new Intent(InstructorActivity.this, InstructorMenuActivity.class);
-                intent.putExtra("instructorName", instructor_name);
-                startActivity(intent);
-                finish();
             }
         });
     }

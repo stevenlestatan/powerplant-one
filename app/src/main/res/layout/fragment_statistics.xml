@@ -5,10 +5,34 @@
     android:layout_height="match_parent"
     tools:context=".instructor.ui.statistics.StatisticsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="199dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="215dp">
+
+        <Spinner
+            android:id="@+id/statistics_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            />
+
+    </RelativeLayout>
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/turbocharger"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="40dp"
+        android:layout_height="240dp" />
+
+    // 75dp margintop ^ orig
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/ballbearing"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_marginTop="315dp"/>
+
+    // 330 dp orig margin top ^
 
 </FrameLayout>

@@ -23,7 +23,6 @@ import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
 public class TurboActivity extends AppCompatActivity {
-
     private ArFragment arFragment;
     private ModelRenderable renderable;
     private TransformableNode transformableNode;

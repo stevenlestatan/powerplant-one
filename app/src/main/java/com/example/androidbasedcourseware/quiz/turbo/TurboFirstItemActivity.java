@@ -17,6 +17,7 @@ import com.example.androidbasedcourseware.R;
 import com.example.androidbasedcourseware.datalayer.DataAccessLayer;
 import com.example.androidbasedcourseware.discussion.turbo.PistonActivity;
 import com.example.androidbasedcourseware.instructor.InstructorActivity;
+import com.example.androidbasedcourseware.student.StudentMenuActivity;
 
 public class TurboFirstItemActivity extends AppCompatActivity {
     private RadioGroup group;
@@ -28,6 +29,7 @@ public class TurboFirstItemActivity extends AppCompatActivity {
     private RadioButton c;
     private RadioButton d;
 
+    private String studentId;
     private String firstQuestionAnswer = "";
 
     private Button next;
@@ -95,9 +97,18 @@ public class TurboFirstItemActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TurboFirstItemActivity.this, PistonActivity.class);
-                startActivity(intent);
-                finish();
+                boolean fromDiscussion = getIntent().getBooleanExtra("fromDiscussion", false);
+                boolean fromMenu = getIntent().getBooleanExtra("fromMenu", false);
+
+                if (fromDiscussion) {
+                    Intent intent = new Intent(TurboFirstItemActivity.this, PistonActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(TurboFirstItemActivity.this, StudentMenuActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }

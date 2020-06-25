@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.androidbasedcourseware.R;
 import com.example.androidbasedcourseware.discussion.turbo.TurboActivity;
+import com.example.androidbasedcourseware.quiz.ball_bearing.BallbearingFirstItemActivity;
 import com.example.androidbasedcourseware.quiz.turbo.TurboFirstItemActivity;
 
 public class TestKnowledgeFragment extends Fragment {
@@ -30,7 +31,9 @@ public class TestKnowledgeFragment extends Fragment {
         bearing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent ballBearing = new Intent(getContext(), BallbearingFirstItemActivity.class);
+                ballBearing.putExtra("fromMenu", true);
+                startActivity(ballBearing);
             }
         });
 
@@ -39,6 +42,7 @@ public class TestKnowledgeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent turbo = new Intent(getContext(), TurboFirstItemActivity.class);
+                turbo.putExtra("fromMenu", true);
                 startActivity(turbo);
             }
         });

@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.androidbasedcourseware.R;
+import com.example.androidbasedcourseware.discussion.bell_bearing.BellbearingActivity;
 import com.example.androidbasedcourseware.discussion.turbo.TurboActivity;
 
 public class DiscussionsFragment extends Fragment {
@@ -29,7 +30,8 @@ public class DiscussionsFragment extends Fragment {
         bearing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent bearing = new Intent(getContext(), BellbearingActivity.class);
+                startActivity(bearing);
             }
         });
 
@@ -38,6 +40,7 @@ public class DiscussionsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent turbo = new Intent(getContext(), TurboActivity.class);
+                turbo.putExtra("fromDiscussion", true);
                 startActivity(turbo);
             }
         });

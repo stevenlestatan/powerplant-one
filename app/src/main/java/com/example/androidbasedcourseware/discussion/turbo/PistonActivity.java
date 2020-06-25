@@ -87,6 +87,7 @@ public class PistonActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PistonActivity.this, TurboFirstItemActivity.class);
+                intent.putExtra("fromDiscussion", true);
                 startActivity(intent);
                 finish();
             }

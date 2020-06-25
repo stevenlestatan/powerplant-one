@@ -3,6 +3,7 @@ package com.example.androidbasedcourseware.instructor;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -11,6 +12,8 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.androidbasedcourseware.MainActivity;
@@ -32,12 +35,6 @@ public class InstructorMenuActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String instructorName = getIntent().getStringExtra("instructorName");
-        Bundle b = new Bundle();
-        b.putString("instructorName", instructorName);
-        HomeFragment homeFragment = new HomeFragment();
-        homeFragment.setArguments(b);
-
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
@@ -48,6 +45,18 @@ public class InstructorMenuActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        FrameLayout layout = (FrameLayout)findViewById(R.id.layoutF);
+        layout.setVisibility(View.GONE);
+
+        String instructorName = getIntent().getStringExtra("instructorName");
+        HomeFragment home = new HomeFragment();
+        home = HomeFragment.newInstance(instructorName);
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.layoutF, home);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        ft.commit();
     }
 
     @Override

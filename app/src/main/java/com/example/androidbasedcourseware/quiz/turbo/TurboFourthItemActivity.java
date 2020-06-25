@@ -19,12 +19,13 @@ public class TurboFourthItemActivity extends AppCompatActivity {
     private RadioGroup group;
     private DataAccessLayer da;
 
-    private TextView secondQ;
+    private TextView fourthQ;
     private RadioButton a;
     private RadioButton b;
     private RadioButton c;
     private RadioButton d;
 
+    private String studentId;
     private String firstQuestionAnswer = "";
     private String secondQuestionAnswer = "";
     private String thirdQuestionAnswer = "";
@@ -39,7 +40,7 @@ public class TurboFourthItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_turbo_fourth_item);
         da = new DataAccessLayer(this);
 
-        secondQ = (TextView)findViewById(R.id.turbo_fourth_question);
+        fourthQ = (TextView)findViewById(R.id.turbo_fourth_question);
         a = (RadioButton)findViewById(R.id.radA);
         b = (RadioButton)findViewById(R.id.radB);
         c = (RadioButton)findViewById(R.id.radC);
@@ -50,7 +51,7 @@ public class TurboFourthItemActivity extends AppCompatActivity {
             Cursor c = da.getTurboQuizSetByItemNo(4);
             if (c.getCount() > 0) {
                 c.moveToFirst();
-                secondQ.setText(c.getString(c.getColumnIndex(da.COLUMN_QUIZ_SET_ITEM_QUESTIONS)));
+                fourthQ.setText(c.getString(c.getColumnIndex(da.COLUMN_QUIZ_SET_ITEM_QUESTIONS)));
             }
         }
 
@@ -60,16 +61,16 @@ public class TurboFourthItemActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i) {
                     case R.id.radA:
-                        secondQuestionAnswer = "A";
+                        fourthQuestionAnswer = "A";
                         break;
                     case R.id.radB:
-                        secondQuestionAnswer = "B";
+                        fourthQuestionAnswer = "B";
                         break;
                     case R.id.radC:
-                        secondQuestionAnswer = "C";
+                        fourthQuestionAnswer = "C";
                         break;
                     case R.id.radD:
-                        secondQuestionAnswer = "D";
+                        fourthQuestionAnswer = "D";
                         break;
                 }
             }
@@ -85,6 +86,9 @@ public class TurboFourthItemActivity extends AppCompatActivity {
                 }
 
                 Intent intent = new Intent(TurboFourthItemActivity.this, TurboFifthItemActivity.class);
+                firstQuestionAnswer = getIntent().getStringExtra("firstQuestionAnswer");
+                secondQuestionAnswer = getIntent().getStringExtra("secondQuestionAnswer");
+                thirdQuestionAnswer = getIntent().getStringExtra("thirdQuestionAnswer");
                 intent.putExtra("firstQuestionAnswer", firstQuestionAnswer);
                 intent.putExtra("secondQuestionAnswer", secondQuestionAnswer);
                 intent.putExtra("thirdQuestionAnswer", thirdQuestionAnswer);

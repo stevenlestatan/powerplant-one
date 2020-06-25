@@ -21,7 +21,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".quiz.turbo.TurboFifthItemActivity"></activity>
+        <activity android:name=".quiz.ball_bearing.BallbearingFifthItemActivity"></activity>
+        <activity android:name=".quiz.ball_bearing.BallbearingFourthItemActivity" />
+        <activity android:name=".quiz.ball_bearing.BallbearingThirdItemActivity" />
+        <activity android:name=".quiz.ball_bearing.BallbearingSecondItemActivity" />
+        <activity android:name=".quiz.ball_bearing.BallbearingFirstItemActivity" />
+        <activity android:name=".discussion.bell_bearing.OuterRingActivity" />
+        <activity android:name=".discussion.bell_bearing.InnerRingActivity" />
+        <activity android:name=".discussion.bell_bearing.CageActivity" />
+        <activity android:name=".discussion.bell_bearing.BallActivity" />
+        <activity android:name=".discussion.bell_bearing.BellbearingActivity" />
+        <activity android:name=".quiz.turbo.TurboFifthItemActivity" />
         <activity android:name=".quiz.turbo.TurboFourthItemActivity" />
         <activity android:name=".quiz.turbo.TurboThirdItemActivity" />
         <activity android:name=".quiz.turbo.TurboSecondItemActivity" />
@@ -63,7 +73,6 @@
             android:label="@string/title_activity_student_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".statistics.StatisticsActivity" />
-        <activity android:name=".quiz.QuizPartsBearingsGearingActivity" />
         <activity android:name=".instructor.InstructorActivity" />
         <activity android:name=".student.StudentActivity" />
         <activity android:name=".MainActivity">

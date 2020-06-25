@@ -68,7 +68,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="12dp"
         android:lineSpacingExtra="4dp"
-        android:text="Welcome to Android Based of Courseware for Powerplant One! Here you can read some discussions of Turbocharger and Bell-bearing. Aside from that, you can test your knowledge based on what you learn!"
+        android:text="Welcome to Android Based of Courseware for Powerplant One! Here you can read some discussions of Turbocharger and Ball Bearing. Aside from that, you can test your knowledge based on what you learn!"
         android:textColor="#343434"
         android:textSize="17sp"
         android:textStyle="bold"

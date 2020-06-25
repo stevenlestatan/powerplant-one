@@ -11,7 +11,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="136dp"
         android:layout_height="64dp"
-        android:text="BELL-BEARING"
+        android:text="BALL BEARING"
         android:layout_marginTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

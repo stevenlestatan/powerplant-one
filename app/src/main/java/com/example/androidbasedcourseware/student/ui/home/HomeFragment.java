@@ -21,6 +21,24 @@ import org.w3c.dom.Text;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
+    private String studentName = "";
+    private static Bundle args = new Bundle();
+
+    public static HomeFragment newInstance(String studentName) {
+        HomeFragment h = new HomeFragment();
+        Bundle b = new Bundle();
+        b.putString("studentName", studentName);
+        h.setArguments(b);
+        args = b;
+
+        return h;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        studentName = args.getString("studentName");
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -32,12 +50,13 @@ public class HomeFragment extends Fragment {
         final ImageView inet = root.findViewById(R.id.imgInet);
         philsca.setImageResource(R.drawable.philsca_logo);
         inet.setImageResource(R.drawable.philsca_inet_logo);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        textView.setText(studentName);
+//        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(studentName);
+//            }
+//        });
         return root;
     }
 }

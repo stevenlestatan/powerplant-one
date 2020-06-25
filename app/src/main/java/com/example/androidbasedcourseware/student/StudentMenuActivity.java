@@ -1,11 +1,15 @@
 package com.example.androidbasedcourseware.student;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.androidbasedcourseware.MainActivity;
+import com.example.androidbasedcourseware.quiz.turbo.TurboFifthItemActivity;
 import com.example.androidbasedcourseware.student.ui.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -20,12 +24,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.androidbasedcourseware.R;
+import com.google.ar.core.Frame;
 
 public class StudentMenuActivity extends AppCompatActivity {
     private DrawerLayout drawer;
     private AppBarConfiguration mAppBarConfiguration;
 
     private boolean backPressed = false;
+    private String studentName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +39,6 @@ public class StudentMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_menu);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        final HomeFragment myFragment = new HomeFragment();
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -48,6 +50,20 @@ public class StudentMenuActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        FrameLayout layout = (FrameLayout)findViewById(R.id.layoutF);
+        layout.setVisibility(View.GONE);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Student", MODE_PRIVATE);
+        studentName = sharedPreferences.getString("studentName", "default");
+
+        HomeFragment home = (HomeFragment)getSupportFragmentManager().findFragmentById(R.id.nav_home);
+        home = HomeFragment.newInstance(studentName);
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.layoutF, home);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        ft.commit();
     }
 
     @Override

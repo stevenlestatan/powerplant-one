@@ -26,6 +26,7 @@ public class TurboSecondItemActivity extends AppCompatActivity {
     private RadioButton c;
     private RadioButton d;
 
+    private String studentId;
     private String firstQuestionAnswer = "";
     private String secondQuestionAnswer = "";
 
@@ -84,6 +85,7 @@ public class TurboSecondItemActivity extends AppCompatActivity {
                 }
 
                 Intent intent = new Intent(TurboSecondItemActivity.this, TurboThirdItemActivity.class);
+                firstQuestionAnswer = getIntent().getStringExtra("firstQuestionAnswer");
                 intent.putExtra("firstQuestionAnswer", firstQuestionAnswer);
                 intent.putExtra("secondQuestionAnswer", secondQuestionAnswer);
                 startActivity(intent);

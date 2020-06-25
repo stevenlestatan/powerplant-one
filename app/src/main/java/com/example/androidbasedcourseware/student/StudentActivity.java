@@ -2,9 +2,12 @@ package com.example.androidbasedcourseware.student;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -81,8 +84,13 @@ public class StudentActivity extends AppCompatActivity {
                     }
                 }
 
+                SharedPreferences sharedPreferences = getApplication().getSharedPreferences("Student", MODE_PRIVATE);
+                SharedPreferences.Editor edit = sharedPreferences.edit();
+                edit.putString("studentName", student_name);
+                edit.putString("studentId", student_id).commit();
+
                 Intent intentTo = new Intent(StudentActivity.this, StudentMenuActivity.class);
-                intentTo.putExtra("studentName", student_name);
+//                intentTo.putExtra("studentName", student_name);
                 startActivity(intentTo);
                 finish();
             }
